@@ -41,7 +41,6 @@ fun WelcomeContent() {
         LeafImage()
         Spacer(modifier = Modifier.height(48.dp))
         WelcomeTitle()
-        Spacer(modifier = Modifier.height(40.dp))
         WelcomeButtons()
     }
 }
@@ -69,16 +68,8 @@ fun WelcomeTitle() {
         Image(painter = painterResource(id = R.drawable.light_logo), contentDescription = null)
         Text(
             text = "Beautiful home garden solutions",
-            lineHeight = 32.sp,
-            style = MaterialTheme.typography.subtitle1.merge(
-                TextStyle(
-                    platformStyle = PlatformTextStyle(includeFontPadding = false),
-                    lineHeightStyle = LineHeightStyle(
-                        alignment = LineHeightStyle.Alignment.Bottom,
-                        trim = LineHeightStyle.Trim.None
-                    )
-                )
-            )
+            style = MaterialTheme.typography.subtitle1,
+            modifier = Modifier.paddingFromBaseline(top = 32.dp, bottom = 40.dp)
         )
     }
 }
